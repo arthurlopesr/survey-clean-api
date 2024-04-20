@@ -1,7 +1,7 @@
-import { MissingParamError } from "../errors/missing-params-error"
-import { badRequest } from "../helpers/httpHelper"
-import { Controller } from "../protocols/controller"
-import { HttpRequest, HttpResponse } from "../protocols/http"
+import { Controller, HttpRequest, HttpResponse } from "@/presentation/protocols"
+import { MissingParamError } from "@/presentation/errors"
+import { badRequest } from "@/presentation/helpers"
+
 
 export class SignUpController implements Controller{
   handle(httpRequest: HttpRequest): HttpResponse {
