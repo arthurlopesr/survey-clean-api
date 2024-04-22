@@ -5,11 +5,7 @@ import { EmailValidator } from "@/presentation/protocols"
 
 
 export class SignUpController implements Controller{
-  private readonly emailValidator: EmailValidator
-
-  constructor(emailValidator: EmailValidator) {
-    this.emailValidator = emailValidator
-  }
+  constructor(private readonly emailValidator: EmailValidator) { }
 
   handle(httpRequest: HttpRequest): HttpResponse {
     const requiredFields = ['name', 'email', 'password', 'passwordConfirmation']
