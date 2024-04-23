@@ -1,7 +1,11 @@
-import { Controller, HttpRequest, HttpResponse } from "@/presentation/protocols"
+import {
+  Controller,
+  HttpRequest,
+  HttpResponse,
+  EmailValidator
+} from "@/presentation/protocols"
 import { InvalidParamError, MissingParamError } from "@/presentation/errors"
 import { badRequest, serverError } from "@/presentation/helpers"
-import { EmailValidator } from "@/presentation/protocols"
 import { AddAccount } from "@/domain/usecases"
 
 
