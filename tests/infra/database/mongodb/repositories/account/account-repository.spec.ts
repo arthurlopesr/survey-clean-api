@@ -1,11 +1,11 @@
 import { MongoHelper } from '@/infra/database/mongodb/helpers/mongo.helper'
 import { AccountMongoRepository } from '@/infra/database/mongodb/repositories/account/account-repository'
 
-const makeSut = (): AccountMongoRepository => {
-  return new AccountMongoRepository()
-}
-
 describe('Account Mongo Repository', () => {
+  const makeSut = (): AccountMongoRepository => {
+    return new AccountMongoRepository()
+  }
+
   beforeAll(async () => {
     await MongoHelper.connect(process.env.MONGO_URL)
   })
