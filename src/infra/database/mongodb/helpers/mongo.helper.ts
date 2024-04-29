@@ -4,7 +4,6 @@ export const MongoHelper = {
   client: null as MongoClient,
 
   async connect(url: string): Promise<void> {
-    this.url = url
     this.client = await MongoClient.connect(url)
   },
 
@@ -16,8 +15,8 @@ export const MongoHelper = {
     return this.client.db().collection(name)
   },
 
-  map(collection: any): any {
-    const { _id, ...collectionWithoutId } = collection
-    return Object.assign({}, collectionWithoutId, { id: _id })
-  }
+  // map(collection: any): any {
+  //   const { _id, ...collectionWithoutId } = collection
+  //   return Object.assign({}, collectionWithoutId, { id: _id })
+  // }
 }
